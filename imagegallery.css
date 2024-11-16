@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('https://e0.pxfuel.com/wallpapers/407/736/desktop-wallpaper-nature-sunset-sun-blur-smooth-branch.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+}
+
+.gallery-container {
+  text-align: center;
+  padding: 40px 20px;
+  color: white;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.tab-menu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-menu button {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 5px;
+  color: white;
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 6px;
+}
+
+.tab-menu button.active {
+  background-color: rgba(255, 255, 255, 0.4);
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+.photo-grid {
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.photo-grid.active {
+  display: grid;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.1);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  backdrop-filter: blur(60px);
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.modal-content img {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  border-radius: 8px;
+}
+
+.close, .prev, .next {
+  position: absolute;
+  top: 50%;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.close {
+  right: 20px;
+  top: 20px;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
