@@ -1,46 +1,63 @@
-let currentIndex = 0;
-let images = [];
+let currentTab = 'all'; 
+let currentIndex = -1; 
+let currentImages = []; 
 
 function openTab(tabName) {
-  const grids = document.querySelectorAll('.photo-grid');
-  const links = document.querySelectorAll('.tab-link');
+  const tabs = document.querySelectorAll('.photo-grid');
+  tabs.forEach(tab => tab.classList.remove('active'));
 
-  grids.forEach(grid => {
-    grid.classList.remove('active');
-  });
+  const selectedTab = document.getElementById(tabName);
+  if (selectedTab) selectedTab.classList.add('active');
 
-  links.forEach(link => {
-    link.classList.remove('active');
-  });
+  const tabLinks = document.querySelectorAll('.tab-link');
+  tabLinks.forEach(link => link.classList.remove('active'));
 
-  document.getElementById(tabName).classList.add('active');
-  event.currentTarget.classList.add('active');
+  const activeTabButton = document.querySelector(`.tab-link[onclick="openTab('${tabName}')"]`);
+  if (activeTabButton) activeTabButton.classList.add('active');
+
+  currentTab = tabName;
+  currentImages = Array.from(selectedTab.querySelectorAll('img'));
+  currentIndex = -1;
+
+
+  closeModal();
 }
 
-function openModal(imgElement) {
+function openModal(img) {
   const modal = document.getElementById('modal');
   const modalImg = document.getElementById('modal-img');
 
-  modal.style.display = "flex";
-  modalImg.src = imgElement.src;
+  modal.style.display = 'flex';
+  modalImg.src = img.src;
 
-  const allImages = document.querySelectorAll('.photo-grid img');
-  images = Array.from(allImages).map(img => img.src);
-  currentIndex = images.indexOf(imgElement.src);
+  currentImages = Array.from(document.querySelector(`#${currentTab}`).querySelectorAll('img'));
+  currentIndex = currentImages.indexOf(img);
 }
 
 function closeModal() {
-  document.getElementById('modal').style.display = "none";
+  const modal = document.getElementById('modal');
+  modal.style.display = 'none';
 }
 
 function changeSlide(direction) {
+  if (!currentImages.length) return;
+
   currentIndex += direction;
 
   if (currentIndex < 0) {
-    currentIndex = images.length - 1;
-  } else if (currentIndex >= images.length) {
+    currentIndex = currentImages.length - 1;
+  } else if (currentIndex >= currentImages.length) {
     currentIndex = 0;
   }
 
-  document.getElementById('modal-img').src = images[currentIndex];
+  const modalImg = document.getElementById('modal-img');
+  modalImg.src = currentImages[currentIndex].src;
 }
+
+
+window.addEventListener('click', (event) => {
+  const modal = document.getElementById('modal');
+  if (event.target === modal) {
+    closeModal();
+  }
+});
