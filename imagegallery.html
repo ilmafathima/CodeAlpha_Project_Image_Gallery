@@ -7,20 +7,17 @@
   <link rel="stylesheet" href="imagegallery.css">
 </head>
 <body>
-  
-
-
 <div class="gallery-container">
   <h2>Image Gallery</h2>
   <div class="tab-menu">
-    <button class="tab-link active" onclick="openTab('all')">All</button>
-    <button class="tab-link" onclick="openTab('Forests')">Forests</button>
-    <button class="tab-link" onclick="openTab('Deserts')">Deserts</button>
-    <button class="tab-link" onclick="openTab('Oceans')">Oceans</button>
-  </div>
+  <button class="tab-link active" onclick="openTab('all')">All</button>
+  <button class="tab-link" onclick="openTab('Forests')">Forests</button>
+  <button class="tab-link" onclick="openTab('Deserts')">Deserts</button>
+  <button class="tab-link" onclick="openTab('Oceans')">Oceans</button>
+</div>
 
   <div id="all" class="photo-grid active">
-   <img src="https://i0.wp.com/blog.bambatravel.com/wp-content/uploads/2018/10/ishan-seefromthesky-432407-unsplash.jpg?resize=752%2C423&ssl=1" alt="Photo 1" onclick="openModal(this)">
+    <img src="https://i0.wp.com/blog.bambatravel.com/wp-content/uploads/2018/10/ishan-seefromthesky-432407-unsplash.jpg?resize=752%2C423&ssl=1" alt="Photo 1" onclick="openModal(this)">
     <img src="https://ocean.si.edu/sites/default/files/styles/full_width_largest/public/2023-11/25691336465_982637ea03_o.jpg.webp?itok=mJN3BTUb" alt="Photo 2" onclick="openModal(this)">
     <img src="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2xhcmdlc3QtZGVzZXJ0LXdvcmxkNy5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgyOH19fQ==" alt="Photo 3" onclick="openModal(this)">
     <img src="https://thetidesofhistory.com/wp-content/uploads/2018/12/pexels-photo-1001682.jpeg?w=816" alt="Photo 4" onclick="openModal(this)">
@@ -34,27 +31,28 @@
     <img src="https://www.lolaapp.com/wp-content/uploads/2024/07/largest-desert-in-africa.jpg.webp" alt="Photo 12" onclick="openModal(this)">
   </div>
 
-  <div id="Forests" class="photo-grid">
-<img src="https://images2.minutemediacdn.com/image/upload/c_fill,w_752,ar_16:9,f_auto,q_auto,g_auto/shape/cover/sport/604599-gettyimages-1083893950-458b5d23ecd7e3642caa7280f596693d.jpg" alt="Mountain Photo 1" onclick="openModal(this)">
-    <img src="https://static.euronews.com/articles/stories/08/01/52/18/1200x675_cmsv2_18655212-ff79-5bb0-84d1-2c5b63327352-8015218.jpg" alt="Mountain Photo 2" onclick="openModal(this)">
-    <img src="https://www.travelandleisure.com/thmb/Ne05bVVgbqpA8FQIvI4vCifNUxA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/hallerbos-forest-halle-belgium-2-BEAUTFORESTS0721-4ff5b556613e4814b5b7165f8851de39.jpg" alt="Mountain Photo 3" onclick="openModal(this)">
-    <img src="https://cdn.britannica.com/95/136995-050-6209F94F/rainforest-Malaysia.jpg" alt="Mountain Photo 3" onclick="openModal(this)">
+ <div id="Forests" class="photo-grid">
+    <img src="https://images2.minutemediacdn.com/image/upload/c_fill,w_752,ar_16:9,f_auto,q_auto,g_auto/shape/cover/sport/604599-gettyimages-1083893950-458b5d23ecd7e3642caa7280f596693d.jpg" alt="Forest Photo 1" onclick="openModal(this)">
+    <img src="https://static.euronews.com/articles/stories/08/01/52/18/1200x675_cmsv2_18655212-ff79-5bb0-84d1-2c5b63327352-8015218.jpg" alt="Forest Photo 2" onclick="openModal(this)">
+    <img src="https://www.travelandleisure.com/thmb/Ne05bVVgbqpA8FQIvI4vCifNUxA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/hallerbos-forest-halle-belgium-2-BEAUTFORESTS0721-4ff5b556613e4814b5b7165f8851de39.jpg" alt="Forest Photo 3" onclick="openModal(this)">
+    <img src="https://cdn.britannica.com/95/136995-050-6209F94F/rainforest-Malaysia.jpg" alt="Forest Photo 4" onclick="openModal(this)">
   </div>
 
   <div id="Deserts" class="photo-grid">
-    <img src="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2xhcmdlc3QtZGVzZXJ0LXdvcmxkNy5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgyOH19fQ==" alt="Sea Photo 1" onclick="openModal(this)">
-    <img src="https://www.wanderlustmagazine.com/wp-content/uploads/2023/11/shorthand/55538/1EYJK7lTZ4/assets/2bJcxuBuoH/shutterstock_309028286-1000x667.jpg" alt="Sea Photo 2" onclick="openModal(this)">
-    <img src="https://th-thumbnailer.cdn-si-edu.com/h-bun2rAGQCTzVJvCy-fJPZB-wE=/fit-in/1600x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/f2/94/f294516b-db3d-4f7b-9a60-ca3cd5f3d9b2/fbby1h_1.jpg" alt="Sea Photo 3" onclick="openModal(this)">
-    <img src="https://www.lolaapp.com/wp-content/uploads/2024/07/largest-desert-in-africa.jpg.webp" alt="Sea Photo 1" onclick="openModal(this)">
+    <img src="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2xhcmdlc3QtZGVzZXJ0LXdvcmxkNy5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgyOH19fQ==" alt="Desert Photo 1" onclick="openModal(this)">
+    <img src="https://www.wanderlustmagazine.com/wp-content/uploads/2023/11/shorthand/55538/1EYJK7lTZ4/assets/2bJcxuBuoH/shutterstock_309028286-1000x667.jpg" alt="Desert Photo 2" onclick="openModal(this)">
+    <img src="https://th-thumbnailer.cdn-si-edu.com/h-bun2rAGQCTzVJvCy-fJPZB-wE=/fit-in/1600x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/f2/94/f294516b-db3d-4f7b-9a60-ca3cd5f3d9b2/fbby1h_1.jpg" alt="Desert Photo 3" onclick="openModal(this)">
+    <img src="https://www.lolaapp.com/wp-content/uploads/2024/07/largest-desert-in-africa.jpg.webp" alt="Desert Photo 4" onclick="openModal(this)">
   </div>
+
   <div id="Oceans" class="photo-grid">
     <img src="https://i0.wp.com/blog.bambatravel.com/wp-content/uploads/2018/10/ishan-seefromthesky-432407-unsplash.jpg?resize=752%2C423&ssl=1" alt="Desert Photo 1" onclick="openModal(this)">
     <img src="https://ocean.si.edu/sites/default/files/styles/full_width_largest/public/2023-11/25691336465_982637ea03_o.jpg.webp?itok=mJN3BTUb" alt="Desert Photo 2" onclick="openModal(this)">
     <img src="https://thetidesofhistory.com/wp-content/uploads/2018/12/pexels-photo-1001682.jpeg?w=816" alt="Desert Photo 3" onclick="openModal(this)">
     <img src="https://www.unh.edu/unhtoday/sites/default/files/styles/article_huge/public/article/2022/ocean_desert.jpeg?itok=Yl-z8ctk" alt="Desert Photo 4" onclick="openModal(this)">
   </div>
-  
- <div id="modal" class="modal">
+
+  <div id="modal" class="modal">
     <span class="close" onclick="closeModal()">&times;</span>
     <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
     <span class="next" onclick="changeSlide(1)">&#10095;</span>
